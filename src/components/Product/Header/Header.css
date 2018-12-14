@@ -1,0 +1,83 @@
+.product .header {
+    position: relative;
+    height: 60px;
+    background: #5f98cd;
+    padding-top: 0;
+  }
+
+  .product .header .menuIcon {
+    position: absolute;
+    width: 29px;
+    height: 15px;
+    top: 23px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .product .header .menuIcon:hover .dashTop, .product .header .menuIcon:hover .dashBottom, .product .header .menuIcon:hover .circle {
+    background: #fff;
+  }
+
+  .product .header .menuIcon .dashTop {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #b2daff;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .product .header .menuIcon .dashBottom {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #b2daff;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 29px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .product .header .menuIcon .circle {
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border-radius: 4px;
+    top: -2px;
+    right: 0;
+    background: #b2daff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .product .header .title {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 20px;
+  }
+
+  .product .header .searchIcon {
+    position: absolute;
+    z-index: 3;
+    font-size: 21px;
+    color: #fff;
+    top: 18px;
+    right: 20px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .product .header .searchIcon:hover {
+    color: #fff;
+  }
