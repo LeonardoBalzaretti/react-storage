@@ -3,6 +3,8 @@ import "./Content.css";
 
 class Content extends React.Component {
 	render() {
+		const {product} = this.props; // ES6 destructuring
+
 		return (
 			<div className="content">
 				<div className="line"></div>
@@ -11,14 +13,14 @@ class Content extends React.Component {
 				<div className="item">
 					<div className="image">
 						<img
-							alt='Doug'
-							src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+							alt={product.name}
+							src={product.image} />
 						</div>
 
 					<span className="name">
-						Product X
+						{product.name}
 						</span>
-					<p className="description">Ate lunch</p>
+					<p className="description">{product.description}</p>
 					<div className="commentCount">
 						2
 					</div>
