@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Product from './components/Product/Product'
-import Loading from './components/Loading/Loading'
+import ProductList from './components/ProductList/ProductList'
 
 import './App.css';
 
@@ -32,15 +31,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="productList">
-				{/* Timeline item */}
-				{this.state.products.map((product) => {
-					return (
-						<Product product={product} key={product.name} />
-					);
-				})}
-				<Loading refreshing={this.state.refreshing} />
-			</div>
+			<ProductList products={this.state.products} refreshing={this.state.refreshing}></ProductList>
 		)
 	}
 }
