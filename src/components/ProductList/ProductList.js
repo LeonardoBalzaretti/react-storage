@@ -13,7 +13,7 @@ class ProductList extends React.Component {
                         <Product product={product} key={product.name} />
                     );
                 })}
-                <Loading refreshing={this.props.refreshing} />
+                <Loading loading={this.props.product.loading} />
             </div>
         )
     };
