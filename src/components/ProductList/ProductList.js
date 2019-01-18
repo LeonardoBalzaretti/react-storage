@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Product from '../Product/Product';
 import Loading from '../Loading/Loading';
 
@@ -7,7 +8,7 @@ class ProductList extends React.Component {
         return (
             <div className="productList">
                 {/* Timeline item */}
-                {this.props.products.map((product) => {
+                {this.props.product.list.map((product) => {
                     return (
                         <Product product={product} key={product.name} />
                     );
@@ -18,4 +19,10 @@ class ProductList extends React.Component {
     };
 }
 
-export default ProductList;
+function mapStateToProps(state, ownProps) {
+    return {
+        product: state.product
+    }
+}
+
+export default connect(mapStateToProps)(ProductList);
